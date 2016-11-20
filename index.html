@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaveMe</title>
+    <link rel="shortcut icon" href="img/icon.png" type="image/png">
+    <link rel="stylesheet" href="css/reset.css ">
+    <link rel="stylesheet" href="css/style.css">
+<!--[if lte IE 8]>
+    <link rel="stylesheet" href="css/styleie.css">
+    <script src="js/polyfills.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ie8/0.4.1/ie8.js"></script>
+    <script src="js/radioinput.js"></script>
+<![endif]-->
+   
+<!--[if lte IE 9]>
+    <script src="js/placeholder.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/classlist/2014.01.31/classList.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+    <header id="home" class="grid__row">
+        <div><a href="#"><img src="img/logo.png" alt=""></a></div>
+        <nav>
+            <ul class="right">
+                <li class="left"><a href="#home">home</a></li>
+                <li class="left"><a href="#files">files</a></li>
+                <li class="left dropdown"><a href="">about&#9660;</a>
+                   <ul class="dropdown__menu">
+                       <li><a href="#about">about us</a></li>
+                       <li><a href="#team">our team</a></li>
+                       <li><a href="#contacts">contact</a></li>
+                   </ul>
+                </li>
+                <li class="left"><a id="login" href="#">login</a></li>
+                <li class="left"><a id="singUp" href="#">sing up</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="form right clearfix grid__row">
+        <form name="login">
+            <label><input type="email" placeholder="YOUR E-MAIL" name="email"></label>
+            <label><input type="password" placeholder="YOUR PASSWORD" name="password"></label>
+            <button type="submit">LOGIN</button>
+        </form>
+            
+        <form name="singUp">
+            <label><input type="text" placeholder="YOUR NAME" name="name"></label>
+            <label><input type="email" placeholder="YOUR E-MAIL" name="email"></label>
+            <label><input type="password" placeholder="CHOOSE PASSWORD" name="password"></label>
+            <label><input type="password" placeholder="CONFIRM PASSWORD" name="password2"></label>
+            <button type="submit">SING UP</button>
+        </form>
+        
+        <p>registration successful <img src="img/ok.png" alt=""></p>
+    </div>
+    <section class="slider clearfix">
+        <div class="slider__container">
+            <div class="slider__content__1 slider__content">
+                <div class="slider__content__wrapper clearfix">
+                    <img class="left" src="img/slider_content_1.png" alt="phone">
+                    <h1 class="slider__content__head">save <span>me</span></h1>
+                    <p>We are your new technology to keepig file more security</p>
+                    <p>We help you save file, money and time</p>
+                    <h3>Save your files <span>free</span></h3>
+                </div>
+            </div>
+            <div class="slider__content__2 slider__content">
+                <div class="slider__content__wrapper clearfix">
+                    <img class="left" src="img/slider_content_2.png" alt="phone">
+                    <h1 class="slider__content__head">save <span>me</span></h1>
+                    <p>The best cloud storage in the <span>world</span></p>
+                    <p>Save place in your PC, save file with us</p>
+                    <h3>Save your files <span>free</span></h3>
+                </div>
+            </div>
+            <div class="slider__content__3 slider__content">
+                <div class="slider__content__wrapper clearfix">
+                    <img class="left" src="img/slider_content_3.png" alt="phone">
+                    <h1 class="slider__content__head">save <span>me</span></h1>
+                    <p>We always with you</p>
+                    <p>Use our mobile apps and support when needs</p>
+                    <h3>Save your files <span>free</span></h3>
+                </div>
+            </div>
+            <div class="slider__content__4 slider__content">
+                <div class="slider__content__wrapper clearfix">
+                    <img class="left" src="img/slider_content_4.png" alt="phone">
+                    <h1 class="slider__content__head">save <span>me</span></h1>
+                    <p>When people put their files in <span>save me</span>, they can trust they’re secure and their data is their own.</p>
+                    <h3>Save your files <span>free</span></h3>
+                </div>
+            </div>
+        </div>
+        <div class="slider__pagination">
+            <ul>
+                <li class="left"><a href="#" class="slider__pagination__current" data-item="0"></a></li>
+                <li class="left"><a data-item="1" href="#"></a></li>
+                <li class="left"><a data-item="2" href="#"></a></li>
+                <li class="left"><a data-item="3" href="#"></a></li>
+            </ul>
+        </div>
+    </section>
+    <div id="files" class="clearfix">
+        <div class="left filter">
+            <form name="search">
+                <input type="search">
+                <img src="img/icon_search.png" alt="">
+            </form>
+            <form name="filter">
+                <p>Filter by date:</p>
+                <input type="radio" name="by-date" id="hours_12" data-sort=12>
+                <label for="hours_12">last 12 hours</label>
+                <input type="radio" name="by-date" id="day" data-sort=24>
+                <label for="day">last day</label>
+                <input type="radio" name="by-date" id="day_3" data-sort=72>
+                <label for="day_3">last 3 days</label>
+                <input type="radio" name="by-date" id="more_day_3" data-sort=Infinity>
+                <label for="more_day_3">more then 3 days</label>
+            
+                <p>Filter by size:</p>
+                <input type="radio" name="by-size" id="small_size" data-sort=5>
+                <label for="small_size">less 5 Mb</label>
+                <input type="radio" name="by-size" id="middle_size" data-sort=10>
+                <label for="middle_size">less 10 Mb</label>
+                <input type="radio" name="by-size" id="big_size" data-sort=Infinity>
+                <label for="big_size">more 10 Mb</label>
+            
+                <p>Filter by type:</p>
+                <input type="radio" name="by-type" id="file_audio" data-sort="files__audio">
+                <label for="file_audio">audio</label>
+                <input type="radio" name="by-type" id="file_video" data-sort="files__video">
+                <label for="file_video">video</label>
+                <input type="radio" name="by-type" id="file_text" data-sort="files__text">
+                <label for="file_text">text</label>
+            </form>
+            <button>clear filter</button>
+        </div>
+        <form name="upload" class="upload">
+            <label>
+                <input type="file" name="file">
+                <img src="img/icon_upload.png" alt="">
+            </label>
+            <input type="image" src="img/icon_save_file.png" alt="save">
+            <p class="file_name">No file chosen</p>
+        </form>
+        <div class="right sort">
+            <form name="sort">
+                <input type="radio" name="sort_file" id="sort_date" checked>
+                <label for="sort_date" class="left">by date</label>
+                <input type="radio" name="sort_file" id="sort_size">
+                <label for="sort_size" class="left">by size</label>
+                <input type="radio" name="sort_file" id="sort_name">
+                <label for="sort_name" class="left">by name</label>
+                <input type="radio" name="sort_file" id="sort_type">
+                <label for="sort_type" class="left">by type</label>
+            </form>
+        </div>
+        
+        <div class="files__row clearfix files__tmpl">
+            <p class="files__name left">  
+            </p>
+            <div class="right">
+                <p class="files__size left">
+                </p>
+                <p class="files__date left"> 
+                </p>
+                <button class="files__download left"></button>
+                <button class="files__delete left"></button>
+            </div>
+        </div>
+            
+        <div class="files__container">
+        </div>
+        <div class="files__pagination">
+            <ul>
+                
+            </ul>
+        </div>
+    </div>
+    <section class="apps clearfix grid__row">
+        <img src="img/phone.png" alt="" class="left">
+        <h2>Save me <span>Mobile Apps</span></h2>
+        <p>The cloud in your pocket. Access and stream your files from your smartphone or tablet. Upload and sync your media to the cloud.</p>
+        <a href="#"><img src="img/google_play.png" alt=""></a>
+        <a href=""><img src="img/apple_store.png" alt=""></a>
+    </section>
+    <section id="about" class="clearfix grid__row">
+        <img class="left" src="img/planet.png" alt="">
+        <h2>
+            Save <span>Me</span>
+        </h2>
+        <p>
+            We believe technology should get out of the way, so there’s no limit to what people can do. We’re a thoughtful, tightly-knit team that’s committed to realising ambitious ideas. We’re making technology work for the world, and the best is yet to come.
+        </p>
+    </section>
+    <section class="offers clearfix grid__row">
+        <div class="left column_4">
+            <img src="img/of_data_encryption.png" alt="">
+            <h3>End-to-End Encryption</h3>
+            <p>Unlike with other cloud storage providers, your data is encrypted&amp;decrypted during transfer by your client devices only and never by us</p>
+        </div>
+        <div class="left column_4">
+            <img src="img/of_user_shield.png" alt="">
+            <h3>Secure Global Access</h3>
+            <p>Your data is accessible any time, from any device, anywhere. Only you control the keys to your files</p>
+        </div>
+        <div class="left column_4">
+            <img src="img/of_statistics.png" alt="">
+            <h3>Speed Without Limits</h3>
+            <p>We will reduce loading times, improve download performance and strengthen security.</p>
+        </div>
+    </section>
+    <section id="team" class="clearfix grid__row">
+        <h2>our <span>team</span></h2>
+        <div class="left team__content column_4">
+            <div>
+                <img src="img/team_1.jpg" alt="">
+                <div class="society">
+                    <a href="#">
+                        <img src="img/share_linkedin.png" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="img/share_facebook.png" alt="">
+                    </a>
+                </div>    
+            </div>
+            <h3>Founder</h3>
+        </div>
+        <div class="left team__content column_4">
+            <div>
+                <img src="img/team_2.jpg" alt="">
+                <div class="society">
+                    <a href="#">
+                        <img src="img/share_linkedin.png" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="img/share_facebook.png" alt="">
+                    </a>
+                </div>    
+            </div>
+            <h3>Tech Lead</h3>
+        </div>
+        <div class="left team__content column_4">
+            <div>
+                <img src="img/team_3.jpg" alt="">
+                <div class="society">
+                    <a href="#">
+                        <img src="img/share_linkedin.png" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="img/share_facebook.png" alt="">
+                    </a>
+                </div>    
+            </div>
+            <h3>Senior Developer</h3>
+        </div>
+        <div class="left team__content column_4">
+            <div>
+                <img src="img/team_4.jpg" alt="">
+                <div class="society">
+                    <a href="#">
+                        <img src="img/share_linkedin.png" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="img/share_facebook.png" alt="">
+                    </a>
+                </div>    
+            </div>
+            <h3>UX Designer</h3>
+        </div>
+        <div class="left team__content column_4">
+            <div>
+                <img src="img/team_5.jpg" alt="">
+                <div class="society">
+                    <a href="#">
+                        <img src="img/share_linkedin.png" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="img/share_facebook.png" alt="">
+                    </a>
+                </div>    
+            </div>
+            <h3>Senior Developer</h3>
+        </div>
+        <div class="left team__content column_4">
+            <div>
+                <img src="img/team_6.jpg" alt="">
+                <div class="society">
+                    <a href="#">
+                        <img src="img/share_linkedin.png" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="img/share_facebook.png" alt="">
+                    </a>
+                </div>    
+            </div>
+            <h3>Senior Mobile Developer</h3>
+        </div>
+        <h2><span>We</span> are the best</h2>
+    </section>
+    <div id="contacts" class="clearfix grid__row">
+        <div class="left map">
+        </div>
+        <address>
+            <p>Address:</p> 
+            <p>
+                1499 Adams Ct <br>
+                Menlo Park, CA 94025
+            </p>
+            <p>
+                E-mail: <a href="mailto:support@saveme.com">support@saveme.com</a>
+            </p>
+            <p>
+                Tel: <a href="tel:+16503614923">+1 650-361-4923</a>
+            </p>
+        </address>
+    </div>
+    <div class="share clearfix grid__row">
+        <a href="https://www.facebook.com/sharer.php?u=https://ua.linkedin.com/in/tkachukivan" target="_blank"><img src="img/share_facebook.png" alt=""></a>
+        <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://github.com/tkachukivan" target="_blank"><img src="img/share_linkedin.png" alt=""></a>
+        <a href="https://twitter.com/share?url=https://ua.linkedin.com/in/tkachukivan" target="_blank"><img src="img/share_twiter.png" alt=""></a>
+    </div>
+    <footer class="clearfix grid__row">
+        <p class="left">Developed by <a href="https://ua.linkedin.com/in/tkachukivan" target="_blank">Ivan Tkachuk</a></p>
+        <p class="right">2016</p>
+    </footer>
+    
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVaB6nF-3mjpy5nmIY7b_VBtCcfjsHbhc&signed_in=true&callback=initMap"></script>
+    <script defer src="js/map.js"></script>
+    <script src="js/localstorage.js"></script>
+    <script async defer src="js/menuandregisration.js"></script>
+    <script async defer src="js/slider.js"></script>
+    <script src="js/pagination.js"></script>
+    <script src="js/uploaddeletefiles.js"></script>
+    <script src="js/sortfiles.js"></script>
+    <script src="js/filterfiles.js"></script>
+</body>
+</html>
